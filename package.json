@@ -7,13 +7,11 @@
   "scripts": {
     "start": "webpack -p --progress --profile --colors && node server",
     "start:dev": "node api",
-    "build": "webpack -p --progress --profile --colors"
+    "build": "webpack -p --progress --profile --colors",
+    "build:verbose": "webpack -p --progress --profile --colors --display-error-details"
   },
   "engines": {
     "node": ">=6"
-  },
-  "browser": {
-    "fs": false
   },
   "dependencies": {
     "@babel/core": "^7.24.6",

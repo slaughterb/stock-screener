@@ -17,24 +17,24 @@ const isProd = (NODE_ENV === 'production');
 module.exports = {
 	entry: {
 		'app': [
-			fns.root('../client/app/index.js')
+			fns.root('./client/app/index.js')
 		]
 	},
 	output: {
-		path: fns.root('../dist'),
+		path: fns.root('./dist'),
 		publicPath: '/'
 	},
 	resolve: {
 		extensions: ['.html', '.css', '.scss', '.js', '.json'],
 		alias: {
-			'app': '../client/app'
+			'app': './client/app'
 		}
 	},
 	module: {
 		rules: [
 			{
 				test: /\.js$|jsx/,
-				include: fns.root('../client'),
+				include: fns.root('./client'),
 				loader: 'babel-loader'
 			},
 			{
@@ -71,7 +71,7 @@ module.exports = {
 						loader: 'file-loader',
 						options: {
 							name: '[path][name].[ext]?[hash]',
-							context: '../client/public',
+							context: './client/public',
 						}
 					},
 					{
@@ -90,7 +90,7 @@ module.exports = {
 			}
 		}),
 		new HtmlWebpackPlugin({
-			template: fns.root('../client/public/index.html'),
+			template: fns.root('./client/public/index.html'),
 			inject: 'body'
 		}),
 		new ExtractTextPlugin({
@@ -98,7 +98,7 @@ module.exports = {
 			disable: !isProd
 		}),
 		new CopyWebpackPlugin([{
-			from: fns.root('../client/public')
+			from: fns.root('./client/public')
 		}])
 	]
 };
