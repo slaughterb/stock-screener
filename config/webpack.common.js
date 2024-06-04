@@ -29,7 +29,7 @@ module.exports = {
 		hashFunction: 'sha256'
 	},
 	resolve: {
-		extensions: ['.html', '.css', '.scss', '.js', '.json'],
+		extensions: ['.html', '.css', '.js', '.json'],
 		alias: {
 			'app': './client/app'
 		}
@@ -44,29 +44,6 @@ module.exports = {
 			{
 				test: /\.css$/i,
 				use: ['style-loader', 'css-loader']
-			},
-			{
-				test: /\.scss$/,
-				loader: ExtractTextPlugin.extract({
-					fallback: 'style-loader',
-					use: [
-						{
-							loader: 'css-loader',
-							options: {
-								'sourceMap': true,
-								'importLoaders': 1
-							}
-						},
-						{
-							loader: 'postcss-loader',
-							options: {
-								plugins: () => [
-									autoprefixer
-								]
-							}
-						}
-					]
-				})
 			},
 			{
 				test: /\.(png|jpg|webp|gif|svg|mp4)$/,

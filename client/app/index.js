@@ -10,7 +10,7 @@ import Home from './components/Home/Home';
 import Dashboard from './components/Dashboard/Dashboard';
 import FinancialModel from './components/FinancialModel/FinancialModel';
 
-import './styles/styles.scss';
+import './styles/styles.css';
 
 
 ReactDOM.render((
