@@ -1,5 +1,5 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import ReactDOM from 'react-dom';
 
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 
@@ -13,10 +13,7 @@ import FinancialModel from './components/FinancialModel/FinancialModel';
 import './styles/styles.scss';
 
 
-const root = createRoot(document.getElementById('app'));
-
-
-root.render((
+ReactDOM.render((
 	<Router>
 		<App>
 			<Routes>
@@ -27,4 +24,4 @@ root.render((
 			</Routes>
 		</App>
 	</Router>
-));
+), document.getElementById('app'));
