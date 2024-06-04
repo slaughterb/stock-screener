@@ -49,8 +49,6 @@ if (inDevelopment) {
 		}
 	}));
 
-	console.log(path.resolve(__dirname, '../dist'));
-
 	app.use(webpackHotMiddleware(compiler));
 	app.use(express.static(path.resolve(__dirname, '../dist')));
 } else {
