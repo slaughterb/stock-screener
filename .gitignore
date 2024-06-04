@@ -1,0 +1,16 @@
+# Compilation/Config
+dist/
+config/config.js
+# Node files
+node_modules
+.npm
+.node_repl_history
+.lock-wscript
+*.log
+# OS files
+.DS_Store
+$RECYCLE.BIN/
+Desktop.ini
+Thumbs.db
+._*
+.Trashes
