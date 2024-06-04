@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "start": "webpack -p --progress --profile --colors && node server",
-    "start:dev": "node server"
+    "start:dev": "node api"
   },
   "engines": {
     "node": ">=6"
