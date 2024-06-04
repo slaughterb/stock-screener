@@ -1,0 +1,17 @@
+
+.navMenu {
+	padding: 1em;
+	background-image: url('../../../public/assets/img/navbar-bg.webp');
+}
+
+.navMenu .navLink {
+	margin: 1em;
+	color: white;
+	font-family: cursive;
+	font-size: 21px;
+}
+
+.navMenu .navLink:hover {
+	color: mediumpurple;
+}
+

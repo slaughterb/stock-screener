@@ -1,0 +1,46 @@
+
+.pageContainer {
+	padding: 1.3em;
+}
+
+.stockWatchlist {
+	max-width: 280px;
+}
+
+.stockWatchlist li {
+	margin: 0.5em auto;
+}
+
+.stockWatchlist li p {
+	background: darkblue;
+	color: white;
+	padding: 0.5em;
+	border-radius: 8px;
+	max-width: 45px;
+	text-align: center;
+}
+
+.watchlistRow {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.deleteButton {
+	background: red;
+	color: white;
+}
+
+.sendWatchlist {
+	background: #2f4f4f;
+	color: white;
+	padding: 0.3em;
+	border-radius: 4px;
+}
+
+.finnhubButton {
+	background: #01c701;
+	color: white;
+	padding: 0.3em;
+	border-radius: 4px;
+}

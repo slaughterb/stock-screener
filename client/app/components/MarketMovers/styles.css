@@ -1,0 +1,54 @@
+
+.topMoversContainer .halfCol {
+    width: 50%;
+    text-align: center;
+}
+
+.fmpTopGainers {
+    background: green;
+    color: white;
+    padding: 0.2em;
+}
+
+.gainersTable {
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 1em;
+}
+
+.gainersTable tr {
+    background-color: #d4ffd4;
+}
+
+.gainersTable tr:nth-child(even) {
+    background-color: #9bf89b;
+}
+
+.fmpTopDecliners {
+    background: red;
+    color: white;
+    padding: 0.2em;
+}
+
+.declinersTable {
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 1em;
+}
+
+.declinersTable tr {
+    background-color: #ffa6a6;
+}
+
+.declinersTable tr:nth-child(even) {
+    background-color: #ff8585;
+}
+
+.center {
+    text-align: center;
+}
+
+.inline {
+    display: inline-block;
+    vertical-align: top;
+}

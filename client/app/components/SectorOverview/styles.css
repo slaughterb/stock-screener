@@ -1,0 +1,37 @@
+
+
+.sectorOverviewContainer h3 {
+	text-align: center;
+}
+
+.sectorButtonContainer {
+	text-align: center;
+}
+
+.sectorButton {
+	background-color: #e3e3e3;
+	padding: 0.2em;
+}
+
+.sectorsTable {
+	background: #d2f7ff;
+	padding: 1.2em;
+	margin: 0.5em auto;
+	border-radius: 6px;
+	width: 60%;
+	border: 1px solid black;
+}
+
+.sectorsTable th, .sectorsTable td {
+	text-align: center;
+}
+
+.sectorsTable th {
+	border-bottom: 1px solid black;
+}
+
+.sectorsTable td {
+	font-weight: 400;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
