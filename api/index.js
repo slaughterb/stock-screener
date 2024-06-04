@@ -12,8 +12,8 @@ const webpackHotMiddleware = require('webpack-hot-middleware');
 const mongoose = require('mongoose');
 const historyApiFallback = require('connect-history-api-fallback');
 
-const config = require('../config/config');
-const webpackConfig = require('../webpack.config');
+const config = require('./config/config');
+const webpackConfig = require('./webpack.config');
 
 const PORT = process.env.PORT || 8080;
 const inDevelopment = process.env.NODE_ENV !== 'production';
