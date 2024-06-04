@@ -6,6 +6,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const crypto = require('crypto');
+const crypto_orig_createHash = crypto.createHash;
+crypto.createHash = algo => crypto_orig_createHash(algo === 'md4' ? 'sha256' : algo);
 
 const fns = require('./helpers');
 
@@ -22,7 +25,8 @@ module.exports = {
 	},
 	output: {
 		path: fns.root('./dist'),
-		publicPath: '/'
+		publicPath: '/',
+		hashFunction: 'sha256'
 	},
 	resolve: {
 		extensions: ['.html', '.css', '.scss', '.js', '.json'],

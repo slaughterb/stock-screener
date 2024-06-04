@@ -11,7 +11,7 @@
     "build:verbose": "webpack -p --progress --profile --colors --display-error-details"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">= 18.17.0"
   },
   "dependencies": {
     "@babel/core": "^7.24.6",
