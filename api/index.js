@@ -12,8 +12,8 @@ const webpackHotMiddleware = require('webpack-hot-middleware');
 const mongoose = require('mongoose');
 const historyApiFallback = require('connect-history-api-fallback');
 
-const config = require('../config/config');
-const webpackConfig = require('../webpack.config');
+const config = require('./config/config');
+const webpackConfig = require('./webpack.config');
 
 const PORT = process.env.PORT || 8080;
 const inDevelopment = process.env.NODE_ENV !== 'production';
@@ -35,6 +35,7 @@ if (inDevelopment) {
 
 	app.use(historyApiFallback({ verbose: false }));
 
+
 	app.use(webpackDevMiddleware(compiler, {
 		publicPath: webpackConfig.output.publicPath,
 		contentBase: path.resolve(__dirname, '../client/public'),
@@ -48,6 +49,8 @@ if (inDevelopment) {
 		}
 	}));
 
+	console.log(path.resolve(__dirname, '../dist'));
+
 	app.use(webpackHotMiddleware(compiler));
 	app.use(express.static(path.resolve(__dirname, '../dist')));
 } else {
@@ -57,6 +60,7 @@ if (inDevelopment) {
 		res.end();
 	});
 }
+
 
 app.listen(PORT, (err) => {
 	if (err) {
