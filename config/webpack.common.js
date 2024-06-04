@@ -34,7 +34,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.js$|jsx/,
-				include: fns.root('client'),
+				include: fns.root('./client'),
 				loader: 'babel-loader'
 			},
 			{

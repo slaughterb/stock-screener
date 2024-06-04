@@ -17,7 +17,7 @@ module.exports = merge(commonConfig, {
 		chunkFilename: '[id].chunk.js'
 	},
 	devServer: {
-		contentBase: './client/public',
+		contentBase: 'client/public',
 		historyApiFallback: true,
 		stats: 'normal',
 	}
