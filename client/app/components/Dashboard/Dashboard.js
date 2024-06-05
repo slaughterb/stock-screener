@@ -30,6 +30,11 @@ class Dashboard extends Component {
 		this.fetchFinnhubData = this.fetchFinnhubData.bind(this);
 	}
 
+	componentWillMount() {
+		this.fetchDashboardInfo();
+		this.fetchFinnhubData();
+	}
+
 
 	fetchDashboardInfo() {
 		fetch('/api/stock/watchlist', { 
@@ -152,7 +157,7 @@ class Dashboard extends Component {
 
 				<div>
 					{
-						this.state.stockData.length !== 0 ? (this.state.stockData.map((data) => <StockInfo key={uuidv4()} data={data} />) : null)
+						this.state.stockData.length !== 0 ? (this.state.stockData.map((data) => <StockInfo key={uuidv4()} data={data} />)) : null
 					}
 				</div>
 
@@ -162,7 +167,7 @@ class Dashboard extends Component {
 
 				<div>
 					{
-						this.state.finnhubData.length !== 0 ? (this.state.fetchFinnhubData.map((data) => <EarningsInfo key={uuidv4()} data={data} />) : null)
+						this.state.finnhubData.length !== 0 ? (this.state.fetchFinnhubData.map((data) => <EarningsInfo key={uuidv4()} data={data} />)) : null
 					}
 				</div>
 			</div>
