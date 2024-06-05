@@ -105,7 +105,7 @@ class MarketMovers extends Component {
                             ) : null}
                         </div>
                     </div>
-                    <div className="halfCol inline">
+                    <div className="halfColFlex inline">
                         <div>
                             <button onClick={this.queryTopDecliners} className="fmpTopDecliners">Show Top Decliners</button>
                         </div>
