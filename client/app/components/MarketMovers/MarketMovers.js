@@ -78,7 +78,7 @@ class MarketMovers extends Component {
             <div className="marketMoversContainer">
                 <h3 className="center">Top Market Movers</h3>
                 <div className="topMoversContainer">
-                    <div className="halfCol inline">
+                    <div className="halfColFlex inline">
                         <div>
                             <button onClick={this.queryTopGainers} className="fmpTopGainers">Show Top Stock Gainers</button>
                         </div>
